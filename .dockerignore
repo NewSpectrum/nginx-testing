@@ -1,0 +1,9 @@
+# Ignore Temporary Files
+*/temp*
+*/*/temp*
+temp?
+
+# Ignore '.md' & '.mdx' (Except the README)
+*.md?
+README-secret.md?
+!README*.md?
