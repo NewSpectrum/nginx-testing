@@ -2,16 +2,24 @@
 
 ARG VERSION=latest
 FROM ubuntu:$VERSION
-# Run?
+ARG VERSION
+RUN echo $VERSION > image_version
 
-# Initiate a Bash shell
-RUN [bash]
+
+# Declare Environment Variables
+ENV PrimaryData="/volumes/primary-data"
+ENV 
 
 
 # Create & Mount a main storage volume
-RUN mkdir /storage
+RUN mkdir 
 RUN #test
 VOLUME ["/storage"]
+
+
+# Initiate Bash Shell & Run Setup Scripts
+RUN ["/bin/bash", "-c", ". ${UbuntuSetup}"]
+
 
 
 
@@ -20,4 +28,3 @@ VOLUME ["/storage"]
 ARG VERSION=latest
 FROM nginx:$VERSION
 # ?
-
